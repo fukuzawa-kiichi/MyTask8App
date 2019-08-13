@@ -103,8 +103,10 @@ class ViewController: UIViewController {
                 Label.text = String(previousNum - screenNum)
             case 13:
                 Label.text = String(previousNum * screenNum)
-            default:
+            case 12:
                 Label.text = String(previousNum / screenNum)
+            default:
+                Label.text = Label.text
             }
             operation = 0
             notAddNum = false
