@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     var math: Bool = false
     // 演算子の箱
     var operation = 0;
+    // 計算結果を入れる箱
+    var ansNum: Double = 0;
     // 最初の処理かどうか
     var isFirst = true
     // 数字を追加させない
@@ -30,7 +32,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+/*
+    // 整数か小数かを判断する関数
+    func judg() {
+        if ansNum
+    }
+    
+ */
+    
     // 数字部分のボタンが押されたときの処理
     @IBAction func numbers(_ sender: UIButton) {
         if isFirst {
