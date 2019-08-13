@@ -245,7 +245,6 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="operator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B8m-KB-wna"/>
                                             <action selector="operators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8V7-7P-Nm8"/>
                                         </connections>
                                     </button>

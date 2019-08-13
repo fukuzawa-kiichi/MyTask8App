@@ -76,10 +76,10 @@ class ViewController: UIViewController {
                 Label.text = String(previousNum / screenNum)
             }
         }else if sender.tag == 11 {
-            Label.text = ""
             previousNum = 0;
             screenNum = 0;
             operation = 0;
+            Label.text = ""
         }
         
     }
