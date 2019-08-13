@@ -17,9 +17,12 @@ class ViewController: UIViewController {
     // 計算処理をするか判断するやつ
     var math: Bool = false
     // 演算子の箱
-    var operation = 0
+    var operation = 0;
+    // 最初の処理かどうか
+    var isFirst = true
 
     @IBOutlet weak var Label: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +31,20 @@ class ViewController: UIViewController {
 
     // 数字部分のボタンが押されたときの処理
     @IBAction func numbers(_ sender: UIButton) {
-        if math == false {
-            Label.text = Label.text! + String(sender.tag - 1)
-            screenNum = Double(Label.text!)!
-        }else {
+        if isFirst {
+            isFirst = false
+            Label.text! = ""
+            // 一度だけ実行したい処理
+        }
+        
+        if math == true {
             Label.text = String(sender.tag - 1)
             screenNum = Double(Label.text!)!
             math = false
+
+        }else {
+            Label.text = Label.text! + String(sender.tag - 1)
+            screenNum = Double(Label.text!)!
         }
     }
     
@@ -44,16 +54,16 @@ class ViewController: UIViewController {
             previousNum = Double(Label.text!)!
             switch sender.tag {
             case 12:
-                Label.text = "÷"
+                Label.text = "÷";
             case 13:
-                Label.text = "×"
+                Label.text = "×";
             case 14:
-                Label.text = "-"
+                Label.text = "-";
             default:
-                Label.text = "+"
+                Label.text = "+";
             }
             operation = sender.tag
-            math = true
+            math = true;
         }else if sender.tag == 16 {
             switch operation {
             case 15:
@@ -65,6 +75,11 @@ class ViewController: UIViewController {
             default:
                 Label.text = String(previousNum / screenNum)
             }
+        }else if sender.tag == 11 {
+            Label.text = ""
+            previousNum = 0;
+            screenNum = 0;
+            operation = 0;
         }
         
     }
