@@ -73,6 +73,9 @@
                                         <state key="normal" title="-">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXf-4r-SI7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -100,6 +103,9 @@
                                         <state key="normal" title="=">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f7i-mj-d9a"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -161,6 +167,9 @@
                                         <state key="normal" title="×">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="szC-QI-e3R"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -219,6 +228,9 @@
                                         <state key="normal" title="+">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZU-9t-l0b"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -232,6 +244,10 @@
                                         <state key="normal" title="C">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B8m-KB-wna"/>
+                                            <action selector="operators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8V7-7P-Nm8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hga-Lw-ueB">
                                         <rect key="frame" x="248" y="0.0" width="72" height="72"/>
@@ -243,6 +259,9 @@
                                         <state key="normal" title="÷">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operators:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cg6-Mc-0zf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

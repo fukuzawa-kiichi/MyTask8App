@@ -17,9 +17,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // 数字部分のボタンが押されたときの処理
     @IBAction func numbers(_ sender: UIButton) {
+        ansLabel.text = String(sender.tag - 1)
+    }
+    
+    // 演算子部分のボタアンが押されたときの処理
+    @IBAction func operators(_ sender: UIButton) {
         
     }
+    
+    
     
 }
 
