@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     // 演算子の箱
     var operation = 0;
     // 計算結果を入れる箱
-    var ansNum: Double = 0;
+    var ansNum:Double  = 0
     // 最初の処理かどうか
     var isFirst = true
     // 数字を追加させない
@@ -32,13 +32,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-/*
+
     // 整数か小数かを判断する関数
     func judg() {
-        if ansNum
+        let ans: [String] = String(ansNum).components(separatedBy: ".")
+        if ans[1] == "0" {
+            Label.text = String((ansNum.description as  NSString).integerValue)
+        }else {
+            Label.text = String(ansNum)
+        }
     }
     
- */
+ 
     
     // 数字部分のボタンが押されたときの処理
     @IBAction func numbers(_ sender: UIButton) {
@@ -107,16 +112,17 @@ class ViewController: UIViewController {
         }else if sender.tag == 16 {
             switch operation {
             case 15:
-                Label.text = String(previousNum + screenNum)
+                ansNum = previousNum + screenNum
             case 14:
-                Label.text = String(previousNum - screenNum)
+                ansNum = previousNum - screenNum
             case 13:
-                Label.text = String(previousNum * screenNum)
+                ansNum = previousNum * screenNum
             case 12:
-                Label.text = String(previousNum / screenNum)
+                ansNum = previousNum / screenNum
             default:
                 Label.text = Label.text
             }
+            judg()
             operation = 0
             notAddNum = false
         // Cが押されたとき
